@@ -11,7 +11,7 @@ RUN echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
 
 USER postgres
 
-COPY adjust-encoding.sh adjust-encoding.sh
+COPY ./adjust-encoding.sh adjust-encoding.sh
 RUN ./adjust-encoding.sh
 
 EXPOSE 5432
